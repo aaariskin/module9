@@ -30,7 +30,7 @@ print('Задача 5. Марсоход 2')
 x = 8
 y = 10
 
-for iteration in range(100):
+while True:
     print(f"Марсоход находится на позиции {x}, {y}, введите команду:")
     command = input()
     if command == "A" and x > 1:

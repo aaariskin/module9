@@ -10,3 +10,20 @@ print('Задача 8. Колонтитул')
 # которая спрашивает у пользователя сначала общую длину колонтитула в символах,
 # потом желаемое количество восклицательных знаков,
 # после чего выводит на экран готовую строку.
+
+symbolCount = int(input("Введите длину колонтитула в символах: "))
+while True:
+  exmarkCount = int(input("Введите количество знаков '!': "))
+  
+  if exmarkCount > symbolCount:
+      print("Восклицательных знаков не может быть больше!")
+      continue
+      
+  if (symbolCount - exmarkCount) % 2 != 0:  # нечетное
+      print("~" * ((symbolCount - exmarkCount) // 2 + 1), end="")
+  else:
+      print("~" * ((symbolCount - exmarkCount) // 2), end="")
+  
+  print("!" * exmarkCount, end="")
+  print("~" * ((symbolCount - exmarkCount) // 2))
+  break
