@@ -14,17 +14,19 @@ print('Задача 6. Спецшифр')
 # Самая длинная последовательность: 3
 
 sequence = 0
-maxCount = 0
+max_count = 0
 
 text = input("Введите строку: ")
 
 for symbol in text:
     if symbol == "s":
         sequence += 1
-    elif maxCount < sequence:
-        maxCount = sequence
+    elif max_count < sequence:
+        max_count = sequence
         sequence = 0
     else:
         sequence = 0
+if max_count < sequence:
+    max_count = sequence
 
-print(f"Самая длинная последовательность: {maxCount}")
+print(f"Самая длинная последовательность: {max_count}")

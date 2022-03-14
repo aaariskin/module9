@@ -26,5 +26,7 @@ for symbol in text:
         sequence = 0
     else:
         sequence = 0
+if maxSymbol < sequence:
+    maxSymbol = sequence
 
 print(f"Длина самого длинного слова: {maxSymbol}")
